@@ -1,0 +1,10 @@
+deleteOne()
+
+permite eliminar el primer documento que encuentre que haga coincidencia en la 
+busqueda si se le indica uno o mas filtros, en caso contrario eliminara el primero
+
+deleteMany()
+
+permite eliminar varios documentos que hagan coincidencia en la 
+busqueda si se le indica uno o mas filtros, en caso contrario eliminara todos los 
+documentos

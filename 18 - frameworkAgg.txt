@@ -1,0 +1,23 @@
+etapas de agregacion (agregate)
+
+- coleccion (entera o filtrada)
+
+- match (filtrar) 
+
+- group (agrupar)
+
+- sort (ordenar)
+
+- project (proyectar)
+
+db.collection.aggregate([
+
+
+
+- {$match:{key:{operator:value}}}
+
+- {$group:{_id:{expresion},<field1>: { <accumulator1> : <expression1> },...}}
+
+- {$sort:{keyCreate:-1 || 1}}
+
+- {$project:{campos para ver y no ver,crear campo nuevo(opcional)}}

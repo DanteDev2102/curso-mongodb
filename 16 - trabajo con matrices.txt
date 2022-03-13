@@ -1,0 +1,7 @@
+busqueda dentro de una matriz
+
+db.collection.find({"key.propiedad":"value"})
+
+proyeccion en una matriz
+
+db.collection.find({key:value},{"projection.$":0 || 1})

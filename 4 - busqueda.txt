@@ -1,0 +1,24 @@
+find()
+
+muestra todos los documentos dentro de una colleccion y permite filtrar documentos
+con el uso de parametros
+
+db.collection.find({propiedad:value,...}).pretty()
+
+muestra todas las coincidencias con dichos parametros. La funcion pretty se utiliza
+para identar la informacion
+
+si se indica una propiedad en el filtro y se le asigna el valor 0 esta sera omitida
+en la busqueda
+
+db.collection.find(filter,{propiedad:0})
+
+ejemplo:
+
+db.movie.find({name:"el libro de la selva"},{_id:0})
+
+findOne()
+
+busca y retorna la primera coincidencia encontrada ya identada
+
+db.collection.findOne()

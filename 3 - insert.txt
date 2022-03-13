@@ -1,0 +1,16 @@
+insertMany()
+
+permite insertar varios documentos a la base de datos con el siguiente formato
+
+db.collection.insertMany([document1,document2,...])
+
+insertOne()
+
+permite insertar solo un documento
+
+db.collection.insertOne(document)
+
+insert() // no recomendable de usar
+
+permite insertar uno o multiples documentos
+

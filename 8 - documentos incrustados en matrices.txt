@@ -1,0 +1,23 @@
+los podemos distinguir con la siguiente sintaxis
+
+{
+	_id: 1,
+	almacen: "almacen1",
+	inventario: [
+		{
+			producto:"widgetA",
+			in_stock:24
+		},
+		{
+			producto:"widgetB",
+			in_stock:107
+		},
+		{
+			producto:"widgetC",
+			in_stock:99
+		}
+	]
+}	
+
+
+db.colecction.insertOne({propiedad1:value,...,matriz:[documentoA,documentoB,...]})

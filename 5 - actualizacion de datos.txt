@@ -1,0 +1,42 @@
+update()
+
+se le indica que busque una coincidencia y en la primera que encuentre realiza
+el cambio indicado
+
+db.collection.update(query,update,options)
+
+tambien se puede hacer que si no encuentra alguna coincidencia cree un nuevo
+documento con los datos indicados
+
+db.collection.update(query,update,{upsert:true})
+
+en caso de desear cambiar todos los documentos existentes seria de la siguiente
+forma
+
+db.collection.update(query,{$set:{update}},{multi:true})
+
+updateOne()
+
+se le indica que busque una coincidencia y en la primera que encuentre realiza
+el cambio indicado, pero unica y exclusivamente en un solo documento
+
+db.collection.updateOne({key:value},{$set:{key:value}})
+
+updateMany()
+
+se le indica que busque todas las coincidencias y que realize
+el cambio indicado pero exclusivamente para varios documentos
+
+db.collection.updateOne({key:value},{$set:{key:value}})
+
+replaceOne()
+
+reemplaza un unico documento dentro de una coleccion segun el filtro indicado
+
+db.collection.replaceOne(filter,replacement,options)
+
+upsert
+
+permite que se cree un documento en caso de no existir el o el documento
+filtrado
+

@@ -1,0 +1,38 @@
+Cuando se realiza una consulta en MongoDB usando .find() lo que retorna
+dicha consulta es el conjunto de documentos correspondientes a la consulta.
+Se devolverán por defecto los documentos completos con todos sus campos.
+Aunque podemos seleccionar los campos de un documento que queremos devuelva
+la consulta, o lo que es lo mismo hacer una MongoDB Projection.
+
+La proyección se añade como último parámetro del método .find().
+la sintaxis será la siguiente:
+
+db.colección.find({ filtros},{projection})
+
+Si queremos seleccionar varios campos, simplemente tenemos que indicar el
+nombre del campo seguido de un 1. O bien usar un 0 para eliminar los campos
+a mostrar:
+
+db.coleccion.find({filtros},{campo1:0|1,campo2:0|1,...,campoN:0|1})
+
+Así si por ejemplo queremos mostrar sólo el nombre de la ciudad podemos
+ejecutar la consulta siguiente:
+
+db.ciudades.find({habitantes:{$gt:1000}},{ciudad:1})
+
+db.ciudades.find({habitantes:{$gt:1000}},{ciudad:1})
+
+Pero si nos damos cuenta el resultado también nos está mostrando el ObjectId:
+
+{ "_id" : ObjectId("5e7ca2ec93aac12d3eeb46d6"), "ciudad" : "Zaragoza" }
+
+Por defecto, en MongoDB Projection el campo ObjectId se mostrará siempre
+a no ser que indiquemos que no se debe mostrar:
+
+cursor = db.ciudades.find({habitantes:{$gt:1000}},{ciudad:1,_id:0})
+
+Podemos conseguir también que sólo muestre la ciudad diciéndole que no muestre
+ninguno de los demás campos:
+
+db.ciudades.find({habitantes:{$gt:1000}},{habitantes:0,monumentos:0, geo: 0,_id:0})
+

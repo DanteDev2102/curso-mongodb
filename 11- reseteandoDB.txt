@@ -1,0 +1,8 @@
+si deseamos eliminar una de nuestras collecciones de nuestra base de datos 
+utilizaremos
+
+db.collection.drop()
+
+y en caso de que deseemos eliminar nuestra base de datos entera utilizariamos
+
+db.dropDatabase()

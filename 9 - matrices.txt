@@ -1,0 +1,15 @@
+para poder ejecutar metodos y funciones dentro de una matriz hay que usar la
+siguiente sintaxis:
+
+db.collection.method("key.subkey":value)
+
+ejemplo:
+
+db.movie.find("director.year":value)
+
+en caso de desear consultar una posicion de forma mas especificar escribiriamos
+
+db.movie.find("director.0.year": value)
+
+asi podriamos obtener lo que haya en la primera posicion donde se genere la
+coincidencia

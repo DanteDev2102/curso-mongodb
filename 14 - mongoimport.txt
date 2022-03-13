@@ -1,0 +1,9 @@
+intalar el mongotools
+
+abrir otra terminal
+
+ejecutar 
+
+mongoinport --db <namedb> --colection <namecollection> --headerline
+(primera linea la toma como las keys) --file <ruta absoluta del archivo>
+--type <tipo de arhivo> (solo admite json, csv y tsv)

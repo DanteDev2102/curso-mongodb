@@ -1,0 +1,13 @@
+usando la orden:
+	use <name_data_base>
+	
+	y luego guardando algun documento dentro de la misma se crea la base
+	de datos db.collection.insert({"propiedad":"string"||num||bool})
+
+se puede usar la orden: 
+	
+	show dbs
+	
+	para confirmar
+
+los dato siempre se almacenan en formato bson

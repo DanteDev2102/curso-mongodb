@@ -1,0 +1,81 @@
+los filtros es cuando realizamos una busqueda o consulta segun una propiedad, y los
+operadores cuando lo hacemos segun una condicion
+
+sintaxis filtro
+
+db.collection.find({key:value})
+
+sintaxis operador
+
+db.collection.find({key: {$gt:numeber}})
+
+$gt - mayor que
+$eq - igual que
+$ne - distinto de
+$gte - mayor o igual que
+$lt - menor que
+$lte - menor o igual que
+$in - valores dentro de un array especificado
+$nin - operacion contraria a $in
+
+ejemplo $in
+
+{key:{$in:["value","value"]}}
+
+$exist - comprueba si un campo existe o no y toma como valores true y false
+$type - comprueba el tipo de un campo
+
+$or - obvio
+$and - obvio
+$not - obvio
+$nor- colocar en una matriz todo lo que no queremos que se cumpla
+
+ejemplo $or
+
+{key: {$or: [{age:18}, {age:20}]}}
+
+ejemplo $not
+
+{key:{$not:{operador:value}}}
+
+$regex - utilizar expresiones regulares o buscar coincidencias sin ser totalmente 
+filtradas dentro de /expresion/
+
+$expr - devuelve documentos donde se cumpla la expresion pautada
+
+ejemplo $expr
+
+{$expr:{$gt:["$key1","$key2"]}} || {$expr:{$gt:["$key1","value"]}}
+
+$size - permite filtrar segun el tamaño de elementos que tenga una matriz
+o un campo
+
+$all - busque todas las coincidencias indicadas dentro de una matriz o un
+documento incrustado (se puede usar tambien el $and)
+
+$elemMatch - El operador hace coincidir los documentos que contienen un campo
+de matriz con al menos un elemento que coincide con todos los criterios de 
+consulta especificados
+
+$slice - visualizar los elementos contenidos en una matriz relacionada a una llave
+y se limitara a mostrar la cantidad de elementos indicados y se puede tambien
+indicar de donde a donde se quiere mostrar [1,8]
+
+$inc - permite incrementar los valores numericos segun indiquemos dentro de una key
+o incluso reducir segun indiquemos
+
+$min - actualiza un campo siempre y cuando al hacer match la coincidencia sea un
+valor mayor al indicado
+
+$max - actualiza un campo siempre y cuando al hacer match la coincidencia sea un
+valor menor al indicado
+
+$mul - multiplica el campo a actualizar por el valor indicado
+
+$unset - a diferencia del operador $set este elimina uno o varios campos al
+actualizar un documento 
+
+$rename - permite cambiar el nombre de uno o mas keys en una collecion de 
+documentos
+
+

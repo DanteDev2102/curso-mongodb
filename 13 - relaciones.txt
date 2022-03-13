@@ -1,0 +1,65 @@
+uno a uno (incrustado) uno a muchos (incrustado)
+{
+	key: value,
+	key:{
+		key:value,
+		key: value
+	}
+}
+
+para acceder a una de las key solo hace falta hacer
+
+db.collection.findOne(query).key
+
+
+uno a uno (referencias) uno a muchos (referencias)
+
+se crea una key donde se hara referencia a las id de sus documentos contenidos
+pero se se usara de esta forma para hacer referencias en un crecimiento de datos
+logaritmico. Para evitar matrices crecientes y cambiantes , almacene la referencia
+del editor dentro del documento del libro
+
+{
+	_id:'orelia',
+	name: "O'Reilly Media",
+	founded: 1980,
+	location: 'CA'
+}
+
+{
+	_id:123456789,
+	title: 'Mongo',
+	mas datos...,
+	publisher_id: 'orelia'
+}
+{
+	id:0321654987,
+	title: 'SQL',
+	mas datos...,
+	publisher_id: 'orelia'
+}
+
+muchos a muchos (incrustado)
+
+{
+	_id:'123',
+	title: 'tut1',
+	author: 'code',
+	tags: [
+		{name:'TagA,slug:'Tag-A'},
+		{name:'TagB',slug:'Tag-B'}
+	]
+		
+}
+
+{
+	_id:'123',
+	name: 'TagA',
+	slug: 'Tag-A',
+	tuts: [
+		{name:'tut1',author:'code'},
+		{name:'izd',author:'code'}
+	]
+}
+
+muchos a muchos (referencia)

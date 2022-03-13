@@ -1,0 +1,3 @@
+buscar en la pag de mongo y descargar la version de comunidad .msi
+
+agregar mongo al path

@@ -1,0 +1,11 @@
+	los cursores son los resultados de la aplicacion del metodo find().
+	
+	Si al ejecutar
+el metodo find() se nos retornan 20 documentos esos 20 documentos son reconocidos
+como cursores, a dichos cursores podemos aplicarles distintas funciones más como
+por ejemplo los metodos count(), limit() o incluso ejecutar funciones de
+javascript.
+
+	Un cursor seria una equivalencia a los 
+arrays, ya que podemos localizar cursores de la misma manera que elementos 
+posicionados dentro de un array.
